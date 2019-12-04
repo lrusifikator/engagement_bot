@@ -1,0 +1,12 @@
+#!/usr/bin/python3 
+
+from threading import Thread
+import signal
+from eng_bot import checker, bot, signal_handler
+
+if __name__ == '__main__':	
+	signal.signal(signal.SIGINT, signal_handler)
+	Thread(target = checker).start()
+	Thread(target = bot).start()	
+
+

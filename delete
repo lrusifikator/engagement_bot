@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo xargs rm -rf < files.txt
+sudo rm -rf build
